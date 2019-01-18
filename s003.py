@@ -6,7 +6,6 @@
 # What is the largest prime factor of the number 600851475143 ?
 
 
-
 import eulerlib
 
 
@@ -15,24 +14,25 @@ import eulerlib
 # Now if we take the number n and repeatedly divide out its smallest factor (which must also be prime), then the last
 # factor that we divide out must be the largest prime factor of n. For reference, 600851475143 = 71 * 839 * 1471 * 6857.
 
+
 def compute():
-	n = 600851475143
-	while True:
-		p = smallest_prime_factor(n)
-		if p < n:
-			n //= p
-		else:
-			return str(n)
+    n = 600851475143
+    while True:
+        p = smallest_prime_factor(n)
+        if p < n:
+            n //= p
+        else:
+            return str(n)
 
 
 # Returns the smallest factor of n, which is in the range [2, n]. The result is always prime.
 def smallest_prime_factor(n):
-	assert n >= 2
-	for i in range(2, eulerlib.sqrt(n) + 1):
-		if n % i == 0:
-			return i
-	return n  # n itself is prime
+    assert n >= 2
+    for i in range(2, eulerlib.sqrt(n) + 1):
+        if n % i == 0:
+            return i
+    return n  # n itself is prime
 
 
 if __name__ == "__main__":
-	print(compute())
+    print(compute())

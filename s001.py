@@ -12,15 +12,15 @@ import cProfile
 
 
 def compute():
-	ans = sum(x for x in range(1000)if (x % 3 == 0 or x % 5 == 0))
+    ans = sum(x for x in range(1000) if (x % 3 == 0 or x % 5 == 0))
 
-	return str(ans)
+    return str(ans)
 
 
 if __name__ == "__main__":
-	print("Answer is:- ", compute())
+    print("Answer is:- ", compute())
 
 endtime = timer()
 print("Time required for program :-", endtime - starttime)
 
-cProfile.run('compute()')
+cProfile.run("compute()")
