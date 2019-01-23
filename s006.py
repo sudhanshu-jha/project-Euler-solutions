@@ -11,12 +11,6 @@
 # Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 
 
-import time
-from timeit import default_timer as timer
-
-starttime = timer()
-import cProfile
-
 import fractions
 
 
@@ -29,9 +23,3 @@ def compute():
 
 if __name__ == "__main__":
     print("Answer is :-", compute())
-
-
-endtime = timer()
-print("Time required for program :-", endtime - starttime)
-
-cProfile.run("compute()")

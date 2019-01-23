@@ -14,12 +14,6 @@
 # Hence LCM(k1, k2, ..., k_m) = LCM(...(LCM(LCM(k1, k2), k3)...), k_m).
 
 
-import time
-from timeit import default_timer as timer
-
-starttime = timer()
-import cProfile
-
 import fractions
 
 
@@ -32,9 +26,3 @@ def compute():
 
 if __name__ == "__main__":
     print("Answer is :-", compute())
-
-
-endtime = timer()
-print("Time required for program :-", endtime - starttime)
-
-cProfile.run("compute()")

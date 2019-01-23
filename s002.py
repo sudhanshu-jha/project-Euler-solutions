@@ -6,13 +6,6 @@
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
 
-import time
-from timeit import default_timer as timer
-
-starttime = timer()
-import cProfile
-
-
 def compute():
     ans = 0
     x = 1  # Represents the current Fibonacci number being processed
@@ -26,9 +19,3 @@ def compute():
 
 if __name__ == "__main__":
     print("Answer is :-", compute())
-
-
-endtime = timer()
-print("Time required for program :-", endtime - starttime)
-
-cProfile.run("compute()")
